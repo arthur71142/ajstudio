@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AJ STUDIO</title>
+  <meta name="description" content="Criação de sites, logos, cardápios digitais, cartões de visita e designs para Instagram. Fale com AJ STUDIO no WhatsApp." />
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/25d366/whatsapp.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      color: #1e1e1e;
+    }
+    .header p {
+      color: #555;
+      font-size: 1.1em;
+    }
+    .services {
+      margin-top: 30px;
+    }
+    .service {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .service:hover {
+      background-color: #eaf8f1;
+    }
+    .service h3 {
+      margin: 0 0 5px;
+      font-size: 1.2em;
+      color: #1e1e1e;
+      text-decoration: none;
+    }
+    .service p {
+      margin: 0;
+      color: #555;
+    }
+    .whatsapp-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #25d366;
+      color: white;
+      font-weight: bold;
+      padding: 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 30px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+    .whatsapp-btn img {
+      margin-right: 10px;
+    }
+    .whatsapp-btn:hover {
+      background: #1ebe5d;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+      margin-top: 40px;
+    }
+    @media (max-width: 360px) {
+      .header h1 {
+        font-size: 1.8em;
+      }
+      .service h3 {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>AJ STUDIO</h1>
+      <p>Transformando ideias em identidade digital.</p>
+    </div><div class="services">
+  <div class="service" onclick="abrirWhatsApp('Design comum para post de Instagram e story', 9)">
+    <h3>🎨 Design comum para post de Instagram e story</h3>
+    <p>Designs criativos para postagens, promoções e identidade visual em redes sociais.</p>
+  </div>
+  <div class="service" onclick="abrirWhatsApp('Cartão de visita digital', 10)">
+    <h3>📅 Cartão de visita digital</h3>
+    <p>Cartões modernos e clicáveis para enviar no WhatsApp ou Instagram.</p>
+  </div>
+  <div class="service" onclick="abrirWhatsApp('Link em cartão digital', 15)">
+    <h3>🔗 Link em cartão digital</h3>
+    <p>Vários links em uma só página (tipo Linktree), perfeito para redes sociais.</p>
+  </div>
+  <div class="service" onclick="abrirWhatsApp('Cardápio digital', 20)">
+    <h3>🍽️ Cardápio digital</h3>
+    <p>Cardápios interativos e bonitos para restaurantes, lanchonetes e delivery.</p>
+  </div>
+  <div class="service" onclick="abrirWhatsApp('Logo e identidade visual', 12)">
+    <h3>🎨 Logo e identidade visual</h3>
+    <p>Criação de logotipos e identidade visual personalizada para sua marca.</p>
+  </div>
+</div>
+
+<a class="whatsapp-btn" href="https://wa.me/5585988791953" target="_blank">
+  <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp" />
+  Fale comigo no WhatsApp
+</a>
+
+<div class="footer">
+  &copy; 2025 AJ STUDIO. Todos os direitos reservados.
+</div>
+
+  </div>  <script>
+    function abrirWhatsApp(servico, preco) {
+      // Define a data e hora de Brasília (GMT-3)
+      const agora = new Date();
+      const brasilia = new Date(agora.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
+
+      const dia = brasilia.getDate().toString().padStart(2, '0');
+      const mes = (brasilia.getMonth() + 1).toString().padStart(2, '0');
+      const hora = brasilia.getHours().toString().padStart(2, '0');
+      const minutos = brasilia.getMinutes().toString().padStart(2, '0');
+
+      const dataHora = `${dia}/${mes} - ${hora}:${minutos}`;
+
+      const msg = `*📦 Pedido AJ STUDIO (${dataHora})*\n\n*Serviço:* ${servico}\n*Preço:* R$ ${preco},00\n*------------------------------*\n*💬 Me informe os detalhes:*\n- O que você precisa exatamente?\n- Tem alguma referência?\n- Qual o prazo desejado?\n- Observações ou detalhes?\n*------------------------------*\n\n📞 *Atendimento via WhatsApp AJ STUDIO*\nObrigado por confiar no nosso trabalho! ✨`;
+
+      const url = `https://wa.me/5585988791953?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+  </script></body>
+  </html>
